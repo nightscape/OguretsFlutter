@@ -57,7 +57,7 @@ class FlutterOgurets {
       _handler != null && _handler!.platform == DriverPlatform.android;
 
   void leaveRunning(bool l) {
-    this._leaveRunning = l;
+    _leaveRunning = l;
   }
 
   void waitDelayAfterRestartInMilliseconds(int ms) {
@@ -74,11 +74,11 @@ class FlutterOgurets {
   }
 
   void targetApp(String target) {
-    this._targetApp = target;
+    _targetApp = target;
   }
 
   void workingDirectory(String wDir) {
-    this._workingDirectory = _workingDirectory;
+    _workingDirectory = wDir;
   }
 
   Future _run(String runApp) async {

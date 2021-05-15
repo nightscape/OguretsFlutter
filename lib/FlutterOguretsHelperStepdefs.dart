@@ -24,7 +24,7 @@ class FlutterOguretsHelperStepdefs {
       final bytes = await _world!.driver!.screenshot();
 
       if (_state.maxWidth != null || _state.maxHeight != null) {
-        Image src = decodeImage(bytes);
+        Image src = decodeImage(bytes)!;
         Image copy =
             copyResize(src, width: _state.maxWidth, height: _state.maxHeight);
         await File(filename).writeAsBytes(encodeJpg(copy), flush: true);
